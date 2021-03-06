@@ -1,18 +1,18 @@
 <html>
-    <head>
-        <title>Eleventy + Netlify CMS Blog Example</title>
-        {% set css %}
-            {% include "index.css" %}
-        {% endset %}
-        <style>
-            {{ css | cssmin | safe }}
-        </style>
-    </head>
+    {% include "components/_head.njk" %}
 
     <body>
-        <h1 class="baseTitle">
-            Eleventy + Netlify CMS Blog Example
-        </h1>
+        {% include "components/_navbar.njk" %}
+        
+        
+                    
         {{ content | safe }}
+        
+        {% include "components/_footer.njk" %}
+        
+        {% set js %}
+            {% include "js/navbar.js" %}
+        {% endset %}
+    <script>{{ js | safe }}</script>
     </body>
 </html>

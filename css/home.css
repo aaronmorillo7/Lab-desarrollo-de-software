@@ -1,0 +1,125 @@
+.imageBackground {
+	background-image: url(../images/biglogo.png);
+	background-repeat: no-repeat;
+	background-position-x: right;
+	background-position-y: -10rem;
+	background-size: 100vw;
+}
+.homeTitle {
+	font-size: 26px;
+	width: 20rem;
+	line-height: 2.5rem;
+}
+.homeColumn {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	padding: 3rem 5%;
+}
+.cardHome1 {
+	margin-top: 5rem;
+	width: 40rem;
+	box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 3rem 2rem;
+	background-color: #fff;
+}
+
+.paddingText {
+	padding: 2rem;
+	width: 25rem;
+}
+
+.cardTitle {
+	padding: 1.5rem 0px;
+	margin: 0px 1rem;
+}
+
+.titleActive {
+	border-bottom: solid black 2px;
+}
+.buttonFirstCard {
+	padding: 1rem 2rem;
+	margin-left: 1rem;
+	border: 2px solid #0dddd3;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-weight: bold;
+	max-width: max-content;
+	word-spacing: 0.25rem;
+}
+.lessWidth {
+	width: 90%;
+	margin: 0px auto;
+}
+
+.secondSection {
+	background-color: #fff;
+	text-align: center;
+	padding: 3rem;
+}
+.secondTitle {
+	word-spacing: 0.5rem;
+	padding: 1rem;
+}
+.secondSubtitle {
+	color: #4720e3;
+	font-weight: bold;
+	padding-bottom: 1rem;
+	word-spacing: normal;
+	font-size: 1.2rem;
+}
+.secondAbout {
+	padding: 0.5rem 2rem;
+	margin: 0 auto;
+	width: 47rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+.aboutLink {
+	margin: 1rem;
+}
+.thirdRow {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 3rem 5%;
+	margin-bottom: 3rem;
+}
+.polyContainer {
+	position: relative;
+	z-index: 1;
+	transform: scale(1.5);
+	top: -40px;
+}
+.polygonPurple {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+.polygonBlue {
+	position: absolute;
+	left: 120px;
+}
+.polygonGreen {
+	position: absolute;
+	top: 20px;
+	left: 200px;
+}
+.polygonLightGreen {
+	position: absolute;
+	top: 70px;
+	left: 250px;
+}
+
+.thirdCard {
+	box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	z-index: 2;
+	position: relative;
+	padding: 5.5rem 2rem;
+	background-color: #fff;
+	font-size: 1.5rem;
+	max-width: 25rem;
+}

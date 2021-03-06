@@ -1,16 +1,149 @@
 <html>
     <head>
         <title>Eleventy + Netlify CMS Blog Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <style>
-            body{color:#00f;font-family:fantasy}.baseTitle{color:#663399}.postList{width:100%;display:flex;flex-wrap:wrap;flex-direction:row;justify-content:space-evenly}.postFromList{display:flex;flex-direction:column;width:40%}.imagePostList{width:30%}
+            *{margin:0}ul{list-style:none;display:flex;justify-content:right;align-items:center;align-content:center;background-color:#fff}body{color:#000;font-family:Roboto,sans-serif;font-weight:400;margin:0}nav{display:flex;justify-content:space-between;background-color:#fff;border:.5px solid #c4c4c4;box-sizing:border-box;padding:.5rem 1rem}li div{margin-left:1.4rem}a{text-decoration:none}a:visited{color:inherit}.navColor{background-color:#fff;max-width:100%}.textBlack{color:#000}.textPurple{color:#4720e3}.navActive{font-weight:600;border-bottom:solid 2px #0eddd3;position:relative}.logo{margin-top:1rem;margin-left:1.5rem;width:15rem}.baseTitle{color:#663399}.postList{width:100%;display:flex;flex-wrap:wrap;flex-direction:row;justify-content:space-evenly}.postFromList{display:flex;flex-direction:column;width:40%}.imagePostList{width:30%}.active{border-bottom:2px solid #0eddd3;padding-bottom:.3rem;margin-bottom:-.5rem;font-weight:700}.fab{line-height:56px!important}.navIcon{height:1rem}.externalIcon{height:1rem}.textHeavy{font-weight:600}.marginBottom{margin-bottom:.1rem}.smallerText{font-size:.8rem}.box2{width:300px;font-family:arial;position:absolute;border-radius:10px;background:#fff;box-shadow:4px 4px 50px rgba(0,0,0,.25);border-radius:5px;top:4rem;display:none}.boxList{display:flex;flex-direction:column;justify-content:flex-start;justify-items:flex-start;align-items:flex-start;padding:0}.whatIsPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.whatIsPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:40px;top:-150px}.communityPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.communityPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:40px;top:-305px}.aboutPeck:before{content:"";width:0;height:0;position:relative;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid transparent;right:10px;top:20px}.aboutPeck:after{content:"";width:0;height:0;position:relative;border-left:10px solid transparent;border-right:10px solid transparent;border-top:5px solid transparent;border-bottom:20px solid #fff;left:20px;top:-355px}.liPadding{padding:.5rem 5%;width:90%}.liPadding:hover{background:rgba(2,249,207,.13)}@keyframes grow{from{transform:scale(1) translateY(0) translateX(0);z-index:2}to{transform:scale(.1) translateY(-700px) translateX(-700px);z-index:1}}@media only screen and (min-width:993px){nav a.button-collapse{display:block}}footer{width:90%;display:flex;flex-direction:row;justify-content:space-evenly;color:#fff;background-color:#162550;padding:5%}.paddingBot{padding-bottom:1rem;padding-top:.5rem}.footerLogo{width:14rem;margin-bottom:1rem}.column{display:flex;flex-direction:column}.blueBackground{background-color:#162550;align-items:flex-start;align-content:flex-start;justify-content:flex-start;padding:0}.whiteText{color:#ceccd8}.whiteText:visited{color:#ceccd8}.blueBackground li{padding:.25rem 0}.whiteIcon{color:#ceccd8}.row{display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding-right:3rem}.leftText{text-align:left}.imageBackground{background-image:url(../images/biglogo.png);background-repeat:no-repeat;background-position-x:right;background-position-y:-10rem;background-size:100vw}.homeTitle{font-size:26px;width:20rem;line-height:2.5rem}.homeColumn{display:flex;flex-direction:column;width:90%;padding:3rem 5%}.cardHome1{margin-top:5rem;width:40rem;box-shadow:4px 4px 50px rgba(0,0,0,.25);border-radius:5px;padding:3rem 2rem;background-color:#fff}.paddingText{padding:2rem;width:25rem}.cardTitle{padding:1.5rem 0;margin:0 1rem}.titleActive{border-bottom:solid #000 2px}.buttonFirstCard{padding:1rem 2rem;margin-left:1rem;border:2px solid #0dddd3;box-sizing:border-box;border-radius:5px;font-weight:700;max-width:max-content;word-spacing:0.25rem}.lessWidth{width:90%;margin:0 auto}.secondSection{background-color:#fff;text-align:center;padding:3rem}.secondTitle{word-spacing:0.5rem;padding:1rem}.secondSubtitle{color:#4720e3;font-weight:700;padding-bottom:1rem;word-spacing:normal;font-size:1.2rem}.secondAbout{padding:.5rem 2rem;margin:0 auto;width:47rem;font-size:1rem;line-height:1.2rem}.aboutLink{margin:1rem}.thirdRow{width:90%;display:flex;flex-direction:row;justify-content:space-evenly;padding:3rem 5%;margin-bottom:3rem}.polyContainer{position:relative;z-index:1;transform:scale(1.5);top:-40px}.polygonPurple{position:absolute;top:10px;left:20px}.polygonBlue{position:absolute;left:120px}.polygonGreen{position:absolute;top:20px;left:200px}.polygonLightGreen{position:absolute;top:70px;left:250px}.thirdCard{box-shadow:5px 5px 50px rgba(0,0,0,.25);border-radius:5px;z-index:2;position:relative;padding:5.5rem 2rem;background-color:#fff;font-size:1.5rem;max-width:25rem}
         </style>
-    </head>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
 
     <body>
-        <h1 class="baseTitle">
-            Eleventy + Netlify CMS Blog Example
-        </h1>
+        <nav id="navbar" class="navColor">
+            <a href="#" class="brand-logo"><img class="logo" src="../../images/holochainLogo.png"></img></a>
+            <ul class="right navColor">
+                <li><a id="whatIsHolo" class="textBlack" href="#"><div>WHAT IS HOLOCHAIN</div></a>
+                    <div id="whatIsBox" class="box2 whatIsPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Why Holochain</p>
+                                    <p class="smallerText">Start here</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">How it Works</p>
+                                    <p class="smallerText">How Holochain is used</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="solutions" class="textBlack" href="#"><div>SOLUTIONS</div></a>
+                    <div id="solutionsBox" class="box2 whatIsPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Projects</p>
+                                    <p class="smallerText">Who uses Holochain</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Use Cases</p>
+                                    <p class="smallerText">How Holochain is used</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="community" class="textBlack" href="#"><div>COMMUNITY</div></a>
+                    <div id="communityBox" class="box2 communityPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Get Involved</p>
+                                    <p class="smallerText">Discussion forums and code</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Global Events</p>
+                                    <p class="smallerText">Worldwide community events</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Learn</p>
+                                    <p class="smallerText">Tutorials and technical resources</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Get Help</p>
+                                    <p class="smallerText">Bug reports and best practices</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Stay Informed</p>
+                                    <p class="smallerText">Blog, annoucements, and social media</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a id="about" class="textBlack" href="#"><div>ABOUT</div></a>
+                    <div id="aboutBox" class="box2 aboutPeck">
+                        <ul class="boxList">
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Holochain Foundation</p>
+                                    <p class="smallerText">Explore Holochains approach</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Team</p>
+                                    <p class="smallerText">Meet the humans</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Holo</p>
+                                    <p class="smallerText">A P2P distributed platform for hosting</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">CAL</p>
+                                    <p class="smallerText">Open Source license</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Press</p>
+                                    <p class="smallerText">Resources for media coverage</p>
+                                </a>
+                            </li>
+                            <li class="liPadding">
+                                <a href="#" class="textBlack">
+                                    <p class="textHeavy marginBottom">Contact</p>
+                                    <p class="smallerText">Get in touch with us</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><div class="textPurple">DEV PORTAL <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></div></a></li>
+                <li><a href="#"><div class="textPurple">BLOG <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></div></a></li>
+                <li><a class="textBlack" href="#"><div><i class="fab fa-github"></i></div></a></li>
+                <li><a class="textBlack" href="#"><div><img class="navIcon" src="../../images/Vector.svg"></img></div></a></li>
+            </ul>
+            
+        </nav>
+        
+        
+                    
         
 <div class="postList">
     
@@ -23,6 +156,17 @@
                 The first post on the Eleventy + Netlify CMS from scratch blog
             </span>
             <img class="imagePostList" src="/images/uploads/image1.jpg" alt="/images/uploads/image1.jpg"></img>
+        </div>
+    
+        <div class="postFromList">
+            <strong>
+                <a href="/posts/2021-02-19-meow/">Meow</a>
+            </strong>
+            -
+            <span>
+                asdasd
+            </span>
+            <img class="imagePostList" src="/images/uploads/image.1.jpg" alt="/images/uploads/image.1.jpg"></img>
         </div>
     
         <div class="postFromList">
@@ -48,5 +192,211 @@
         </div>
     
 </div>
+        
+        <footer>
+    <div class="column">
+        <img class="footerlogo" src="../../images/hologoWhite.svg"></img>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Our blog <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Dev Portal <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Contact Us <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Holo <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+        </ul>
+        <div class="row">
+            <a  href="#"><div><i class="whiteIcon fab fa-github"></i></div></a>
+            <a class="textBlack" href="#"><div><img class="navIcon" src="../../images/forumWhite.svg"></img></div></a>
+            <a  href="#"><div><i class="whiteIcon fab fa-youtube"></i></div></a>
+            <a  href="#"><div><i class="whiteIcon fab fa-twitter"></i></div></a>
+        </div>
+        <p class="whiteText" style="padding-top:6rem;"><a href="#">Privacy Policy</a> <span style="margin: 0 0.5rem;">|</span> <a href="#">Terms of Use</a></p>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">Develop</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Install Holochain <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Core Concepts <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Glossary <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">GitHub <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">What it Can Do</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Energy</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Currencies</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Social Impact</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Local Economies</a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">Engage</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Learn</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Build</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Connect <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Events <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Community</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Forum<span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Tutorials</a>
+            </li>
+        </ul>
+    </div>
+    <div class="leftText">
+        <h4 class="paddingBot">About</h4>
+        <ul class="column blueBackground">
+            <li>
+                <a class="whiteText " href="#">Our Team</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Our Story</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Cryptographic Autonomy License</a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Holochain Foundation <span style="position: relative; top: -0.1rem;"><i class="fas fa-external-link-alt fa-sm"></i></span></a>
+            </li>
+            <li>
+                <a class="whiteText " href="#">Join Our Team</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+        
+        
+    <script>
+            const listBox = document.querySelectorAll(".box2");
+function disapear() {
+	listBox.forEach((elem) => {
+		elem.style.display = "none";
+	});
+}
+function removeActive() {
+	const element = document.querySelector(".active");
+	element?.classList.remove("active");
+}
+document.addEventListener("click", (event) => {
+	disapear();
+});
+document.addEventListener("mouseover", (event) => {
+	//console.log(event.target.parentElement);
+	if (
+		!event.target.classList.contains("navColor") &&
+		!event.target.parentElement.classList.contains("navColor") &&
+		!event.target.classList.contains("box2") &&
+		!event.target.parentElement.parentElement.parentElement.classList.contains(
+			"boxList"
+		) &&
+		!event.target.parentElement.classList.contains("boxList") &&
+		!event.target.parentElement.parentElement.classList.contains("boxList")
+	) {
+		disapear();
+		removeActive();
+	}
+});
+const whatIsHolo = document.getElementById("whatIsHolo");
+whatIsHolo.addEventListener("click", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("whatIsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+whatIsHolo.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("whatIsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+const solutions = document.getElementById("solutions");
+solutions.addEventListener("click", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("solutionsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+solutions.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("solutionsBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+const community = document.getElementById("community");
+community.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("communityBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+const about = document.getElementById("about");
+about.addEventListener("mouseover", (event) => {
+	event.preventDefault();
+	event.stopPropagation();
+	const box = document.getElementById("aboutBox");
+	removeActive();
+	disapear();
+	event.target.classList.add("active");
+	box.style.display = "block";
+	box.style.animation = "grow 0.4s reverse";
+});
+
+        </script>
     </body>
 </html>

@@ -1,0 +1,54 @@
+footer {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	color: #fff;
+	background-color: #162550;
+	padding: 5%;
+}
+.paddingBot {
+	padding-bottom: 1rem;
+	padding-top: 0.5rem;
+}
+.footerLogo {
+	width: 14rem;
+	margin-bottom: 1rem;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.blueBackground {
+	background-color: #162550;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: flex-start;
+	padding: 0px;
+}
+.whiteText {
+	color: #ceccd8;
+}
+.whiteText:visited {
+	color: #ceccd8;
+}
+
+.blueBackground li {
+	padding: 0.25rem 0px;
+}
+
+.whiteIcon {
+	color: #ceccd8;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 3rem;
+}
+
+.leftText {
+	text-align: left;
+}
