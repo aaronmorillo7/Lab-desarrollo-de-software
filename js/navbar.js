@@ -36,7 +36,7 @@ whatIsHolo.addEventListener("click", (event) => {
 	disapear();
 	event.target.classList.add("active");
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });
 whatIsHolo.addEventListener("mouseover", (event) => {
 	event.preventDefault();
@@ -47,7 +47,7 @@ whatIsHolo.addEventListener("mouseover", (event) => {
 	event.target.classList.add("active");
 
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });
 const solutions = document.getElementById("solutions");
 solutions.addEventListener("click", (event) => {
@@ -58,7 +58,7 @@ solutions.addEventListener("click", (event) => {
 	disapear();
 	event.target.classList.add("active");
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });
 solutions.addEventListener("mouseover", (event) => {
 	event.preventDefault();
@@ -68,7 +68,7 @@ solutions.addEventListener("mouseover", (event) => {
 	disapear();
 	event.target.classList.add("active");
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });
 const community = document.getElementById("community");
 community.addEventListener("mouseover", (event) => {
@@ -79,7 +79,7 @@ community.addEventListener("mouseover", (event) => {
 	disapear();
 	event.target.classList.add("active");
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });
 const about = document.getElementById("about");
 about.addEventListener("mouseover", (event) => {
@@ -90,5 +90,5 @@ about.addEventListener("mouseover", (event) => {
 	disapear();
 	event.target.classList.add("active");
 	box.style.display = "block";
-	box.style.animation = "grow 0.4s reverse";
+	box.style.animation = "grow 0.5s";
 });

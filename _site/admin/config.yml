@@ -4,6 +4,15 @@ backend:
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
+    - label: "Texts"
+      name: "texts"
+      slug: "{{slug}}"
+      files:
+          - label: "Trust texts"
+            name: "text"
+            file: "/home/trustText/trustText.md"
+            fields:
+                - { label: Text, name: text, widget: string }
     - name: "posts"
       label: "Posts"
       folder: "posts"
