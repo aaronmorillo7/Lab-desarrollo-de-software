@@ -4,13 +4,13 @@ backend:
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
-    - label: "Texts-Home"
-      name: "texts-home"
+    - name: "textsHome"
+      label: "TextsHome"
       folder: "home"
       slug: "{{slug}}"
-      create: true
       fields:
           - { label: "Trust and security", name: "trust", widget: "string" }
+          - { label: "Beyond blockchain", name: "beyond", widget: "string" }
     - name: "posts"
       label: "Posts"
       folder: "posts"

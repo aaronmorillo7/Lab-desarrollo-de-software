@@ -1,3 +1,4 @@
+{% for texts in textsHome %}
 <div class="imageBackground">
     <div class="homeColumn">
         <h2 class="homeTitle">An end-to-end open source P2P app framework</h2>
@@ -11,11 +12,12 @@
                 </li>
             </ul>
             <hr/>
-            <div id="texDisappear" class="paddingText">
-            {% if texts-home %}
-               Holochain delivers tech promises of blockchain with a mashup proven tech
-            {% endif %}
-           </div>
+            <div class="paddingText cardDisappear">
+                {{texts.data.beyond}}
+            </div>
+            <div class="paddingText cardDisappear cardDisappearText">
+                {{texts.data.trust}}
+            </div>
             <a href="#" class="buttonFirstCard">
                 Get Started with Holochain
             </a>
@@ -23,3 +25,4 @@
     </div>
     <hr class="lessWidth"/>
 </div>
+{% endfor %}

@@ -5,6 +5,9 @@
 	background-position-y: -10rem;
 	background-size: 100vw;
 }
+.cardDisappearText {
+	display: none;
+}
 .homeTitle {
 	font-size: 26px;
 	width: 20rem;
