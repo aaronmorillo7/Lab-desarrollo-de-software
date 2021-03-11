@@ -11,6 +11,7 @@ collections:
       fields:
           - { label: "Trust and security", name: "trust", widget: "string" }
           - { label: "Beyond blockchain", name: "beyond", widget: "string" }
+          - { label: "Why Holochain", name: "whyHolochain", widget: "text" }
     - name: "posts"
       label: "Posts"
       folder: "posts"
