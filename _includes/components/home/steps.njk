@@ -1,0 +1,15 @@
+<div class="stepSection">
+    <div class="backgroundGradient stepCard">
+        <h2 class="gradientCardTitle">How it works</h2>
+        <div class="gradientCardRow">
+        {% for step in steps %}
+            <div>
+            <p class="stepNumber">{{loop.index}}</p>
+            <p class="stepText">{{step.data.step}}</p>
+            </div>
+        {% endfor %}
+        </div>
+        
+    </div>
+</div>
+<hr class="lessWidth"/>

@@ -127,6 +127,47 @@
 	max-width: 25rem;
 }
 
+.backgroundGradient {
+	background: linear-gradient(
+		270deg,
+		#4720e3 0%,
+		#345ede 32.81%,
+		#0dddd3 100%
+	);
+}
+
+.stepCard {
+	box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	padding: 2rem 4rem;
+}
+.stepNumber {
+	background-color: white;
+	color: black;
+	width: 1rem;
+	padding: 0.2rem;
+	border-radius: 50%;
+	margin-bottom: 0.5rem;
+}
+.gradientCardTitle {
+	margin-bottom: 3rem;
+}
+.stepText {
+	width: 10rem;
+	text-align: left;
+}
+.gradientCardRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.stepSection {
+	padding: 4rem 10rem;
+	text-align: center;
+	color: #fff;
+}
+
 @-webkit-keyframes fade-in {
 	0% {
 		opacity: 0;

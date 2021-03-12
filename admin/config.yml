@@ -12,6 +12,13 @@ collections:
           - { label: "Trust and security", name: "trust", widget: "string" }
           - { label: "Beyond blockchain", name: "beyond", widget: "string" }
           - { label: "Why Holochain", name: "whyHolochain", widget: "text" }
+    - name: "howItWorks"
+      label: "Steps"
+      folder: "home/howItWorks"
+      create: true
+      slug: "{{slug}}"
+      fields:
+          - { label: "New steps", name: "step", widget: "string" }
     - name: "posts"
       label: "Posts"
       folder: "posts"
