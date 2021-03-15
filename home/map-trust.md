@@ -1,6 +1,5 @@
 ---
-trust: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quam erat,
-  vehicula dignissim bibendum at, ornare sed felis.
+trust: This is a test push
 beyond: Holochain delivers tech promises of blockchain with a mashup proven tech
 whyHolochain: It will take all of us working together -- thinkers, builders, and
   users. Holochain can help us get there by upholding peoples's agency and
